@@ -1,0 +1,10 @@
+.page__footer {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 980px) {
+    .page__footer {
+        margin-top: 37px;
+        padding-bottom: 20px;
+    }
+}

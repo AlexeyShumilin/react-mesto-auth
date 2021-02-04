@@ -1,0 +1,10 @@
+.element__like-number {
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0px 7px;
+    overflow: hidden;
+}
