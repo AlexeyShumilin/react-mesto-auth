@@ -54,3 +54,9 @@
 @import url(./blocks/img-popup/__close/img-popup__close.css);
 @import url(./blocks/img-popup/__place/img-popup__place.css);
 @import url(./blocks/img-popup/_is-opened/img-popup_is-opened.css);
+
+@import url("./blocks/signup/__button/signup__button.css");
+@import url("./blocks/signup/__input/signup__input.css");
+@import url("./blocks/signup/__text/signup__text.css");
+@import url("./blocks/signup/__title/signup__title.css");
+@import url("./blocks/signup/signup.css");

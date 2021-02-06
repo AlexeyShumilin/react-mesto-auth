@@ -1,0 +1,13 @@
+@import url(__button/signup__button.css);
+@import url(__input/signup__input.css);
+@import url(__text/signup__text.css);
+@import url(__title/signup__title.css);
+
+.signup {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: min-content;
+}
