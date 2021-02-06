@@ -12,6 +12,11 @@ import {api} from "../utils/Api";
 
 import {CurrentUserContext} from "../context/CurrentUserContext";
 
+
+//import Login from './Login';
+//import Register from './Register';
+//import ProtectedRoute from './ProtectedRoute';
+
 function App() {
     //стейты попапов
 

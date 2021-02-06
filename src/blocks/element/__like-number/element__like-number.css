@@ -5,6 +5,6 @@
     color: black;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin: 0px 7px;
+    margin: 0 7px;
     overflow: hidden;
 }
