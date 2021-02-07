@@ -15,4 +15,3 @@ alexeyshumilin.github.io/mesto-react/§
 ### Стэк:
 
 -react.js API
-

@@ -1,18 +1,16 @@
 .page {
-    min-height: 100vh;
-    font-family: "Inter", "Arial", sans-serif;
-    padding-bottom: 60px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    max-width: 882px;
-    margin: 0 auto;
-    background-color: #000000;
-
+  min-height: 100vh;
+  font-family: "Inter", "Arial", sans-serif;
+  padding-bottom: 60px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 882px;
+  margin: 0 auto;
+  background-color: #000000;
 }
 
-
 @media screen and (max-width: 1024px) {
-    .page {
-        padding-bottom: 0;
-    }
+  .page {
+    padding-bottom: 0;
+  }
 }

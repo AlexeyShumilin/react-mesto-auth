@@ -1,29 +1,29 @@
 .profile__edit {
-    cursor: pointer;
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: all 0.5s ease;
-    z-index: 1;
-    object-fit: scale-down;
+  cursor: pointer;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1;
+  object-fit: scale-down;
 }
 
 @media screen and (max-width: 667px) {
-    .profile__edit {
-        left: 257px;
-    }
+  .profile__edit {
+    left: 257px;
+  }
 }
 
 @media screen and (max-width: 360px) {
-    .profile__edit {
-        left: 95px;
-    }
+  .profile__edit {
+    left: 95px;
+  }
 }
 
 .profile__edit:hover {
-    opacity: 1;
-    transition: opacity 0.5s ease;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }

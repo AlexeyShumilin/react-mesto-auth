@@ -1,9 +1,9 @@
 .element__title {
-    margin: 24px 24px 24px 0;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+  margin: 24px 24px 24px 0;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

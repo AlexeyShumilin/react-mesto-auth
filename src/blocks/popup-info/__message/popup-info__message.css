@@ -1,17 +1,17 @@
 .popup-info__message {
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 29px;
-    margin: 0 0 60px;
-    width: 358px;
-    text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29px;
+  margin: 0 0 60px;
+  width: 358px;
+  text-align: center;
 }
 
 @media screen and (max-width: 620px) {
-    .popup-info__message{
-        font-size: 20px;
-        line-height: 24px;
-        width: 244px;
-        margin-bottom: 50px;
-    }
+  .popup-info__message {
+    font-size: 20px;
+    line-height: 24px;
+    width: 244px;
+    margin-bottom: 50px;
+  }
 }

@@ -1,11 +1,11 @@
 .page__profile {
-    margin-top: 40px;
-    margin-bottom: 50px;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 1024px) {
-    .page__profile {
-        margin-bottom: 36px;
-        margin-top: 43px;
-    }
+  .page__profile {
+    margin-bottom: 36px;
+    margin-top: 43px;
+  }
 }

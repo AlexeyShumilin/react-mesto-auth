@@ -1,29 +1,28 @@
 .header__text {
-    margin: 6px 0 0 auto;
-    padding: 0;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 500;
-    color: #fff;
-    justify-self: flex-end;
-    text-decoration: none;
+  margin: 6px 0 0 auto;
+  padding: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #fff;
+  justify-self: flex-end;
+  text-decoration: none;
 }
 
 .header__text:last-child {
-    
-    margin-left: 24px;
-    cursor: pointer;
-    color: #a9a9a9;
-    font-weight: 400;
-    text-decoration: none;
+  margin-left: 24px;
+  cursor: pointer;
+  color: #a9a9a9;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 .header__text:last-child:hover {
-    opacity: .6;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 920px) {
-    .header__text:last-child {
-        margin-right: 19px;
-    }
+  .header__text:last-child {
+    margin-right: 19px;
+  }
 }

@@ -1,15 +1,15 @@
 .button {
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 2px;
-    color: white;
-    width: 150px;
-    height: 50px;
-    font-size: 30px;
-    display: block;
-    cursor: pointer;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 2px;
+  color: white;
+  width: 150px;
+  height: 50px;
+  font-size: 30px;
+  display: block;
+  cursor: pointer;
 }
 
 .button:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
