@@ -13,9 +13,9 @@ import {api} from "../utils/Api";
 import {CurrentUserContext} from "../context/CurrentUserContext";
 
 
-//import Login from './Login';
-//import Register from './Register';
-//import ProtectedRoute from './ProtectedRoute';
+import Login from './Login';
+import Register from './Register';
+import ProtectedRoute from './ProtectedRoute';
 
 function App() {
     //стейты попапов
@@ -172,6 +172,21 @@ function App() {
     function handleCardDelete(card) {
         setCardDelete(card);
         handleDeleteCardClick();
+    }
+
+    // Log in
+    const handleLogin = _ => {
+        setLoggedIn(true);
+        history.push("/cards");
+    }
+
+    // lig out
+    const handleSignOut = () => {
+        localStorage.removeItem('token');
+        setEmail('');
+        setLoggedIn(false);
+        setIsExpanded(false);
+        setIsSignInLocation(true);
     }
 
     return (
