@@ -13,7 +13,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import InfoTooltip from "./InfoTooltip";
 import { authorize, register, tokenCheck } from "../utils/auth";
 
-import { api } from "../utils/Api";
+import { api } from "../utils/api";
 import { CurrentUserContext } from "../context/CurrentUserContext";
 import { Redirect, Route, Switch, useHistory } from "react-router-dom";
 
