@@ -1,0 +1,6 @@
+.user-info__name-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
