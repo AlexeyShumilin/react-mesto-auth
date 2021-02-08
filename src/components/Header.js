@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Header = ({
   email,
   loggedIn,
-  isSignInLocation,
+  isSignInLocation: isSignInPlace,
   setSignInScreen,
   resetSignInScreen,
   handleSignOut,
@@ -19,12 +19,12 @@ const Header = ({
           Выйти
         </Link>
       )}
-      {!loggedIn && isSignInLocation && (
+      {!loggedIn && isSignInPlace && (
         <Link className="header__text" onClick={resetSignInScreen} to="/signup">
           Регистрация
         </Link>
       )}
-      {!loggedIn && !isSignInLocation && (
+      {!loggedIn && !isSignInPlace && (
         <Link className="header__text" onClick={setSignInScreen} to="/signin">
           Войти
         </Link>

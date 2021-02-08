@@ -25,7 +25,7 @@ const Login = ({ onLogin }) => {
         type="email"
         value={email}
         onChange={handleEmailInput}
-        placeholder="Email"
+        placeholder="email"
         required
       />
       <input
@@ -36,7 +36,7 @@ const Login = ({ onLogin }) => {
         minLength="6"
         value={password}
         onChange={handlePasswordInput}
-        placeholder="Пароль"
+        placeholder="пароль"
         required
       />
       <button type="submit" className="signup__button">

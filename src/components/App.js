@@ -33,13 +33,14 @@ function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(
     false
   );
-  const [isSignInLocation, setIsSignInLocation] = useState(true);
+  const [isSignInPlace, setIsSignInPlace] = useState(true);
   const [loggedIn, setLoggedIn] = useState(false);
   const [isInfoTooltipOpen, setIsInfoTooltipOpen] = useState(false);
   const [email, setEmail] = useState("");
   const history = useHistory();
   const [success, setSuccess] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [errorText, setErrorText] = React.useState("");
 
   //receiving data
   React.useEffect(() => {
@@ -175,11 +176,6 @@ function App() {
       .finally(() => setLoading(false));
   }
 
-  // Отмена всплытия для закрытия по клику по оверлею
-  function noClose(e) {
-    e.stopPropagation();
-  }
-
   function handleCardDelete(card) {
     setCardDelete(card);
     handleDeleteCardClick();
@@ -193,16 +189,17 @@ function App() {
 
   // Checking the token on page load
   useEffect(() => {
-    checkToken();
+    getToken();
+    // eslint-disable-next-line
   }, []);
 
-  // lig out
+  // log out
   const handleSignOut = () => {
     localStorage.removeItem("token");
     setEmail("");
     setLoggedIn(false);
     setIsExpanded(false);
-    setIsSignInLocation(true);
+    setIsSignInPlace(true);
   };
 
   // Open the popup
@@ -222,7 +219,13 @@ function App() {
         }
       })
       .catch((err) => {
-        console.log(err);
+        if (err.status === 400) {
+          setErrorText("one of the fields not transmitted ");
+        } else if (err.status === 401) {
+          setErrorText("User not found or data is not correct .");
+        } else {
+          console.log(err);
+        }
         infoToolTipOpen(false);
       });
   };
@@ -234,7 +237,7 @@ function App() {
         if (res.data?._id) {
           infoToolTipOpen(true);
           history.push("/signin");
-          setIsSignInLocation();
+          setIsSignInPlace(false);
         }
       })
       .catch((err) => {
@@ -244,7 +247,7 @@ function App() {
   };
 
   // Token verification
-  const checkToken = () => {
+  const getToken = () => {
     if (localStorage.getItem("token")) {
       const token = localStorage.getItem("token");
       tokenCheck(token)
@@ -254,7 +257,12 @@ function App() {
             handleLogin();
           }
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          if (err.status === 401) {
+            console.log("Токен не передан или передан не в том формате");
+          }
+          console.log(new Error(err.status));
+        });
     }
   };
 
@@ -265,9 +273,9 @@ function App() {
           isExpanded={isExpanded}
           email={email}
           loggedIn={loggedIn}
-          isSignInLocation={isSignInLocation}
-          setSignInScreen={() => setIsSignInLocation(true)}
-          resetSignInScreen={() => setIsSignInLocation(false)}
+          isSignInLocation={isSignInPlace}
+          setSignInScreen={() => setIsSignInPlace(true)}
+          resetSignInScreen={() => setIsSignInPlace(false)}
           handleSignOut={handleSignOut}
           resetEmail={() => setEmail("")}
           expand={() => setIsExpanded(!isExpanded)}
@@ -282,13 +290,14 @@ function App() {
             onAddPlace={handleAddPlaceClick}
             onCardClick={handleCardClick}
             onCardLike={handleCardLike}
+            onCardDelete={handleCardDelete}
             onDeleteCard={handleDeleteCardClick}
             cards={cards}
           />
 
           <Route path="/signup">
             <Register
-              setSignInScreen={() => setIsSignInLocation(true)}
+              setSignInScreen={() => setIsSignInPlace(true)}
               onRegister={onRegister}
             />
           </Route>
@@ -332,7 +341,7 @@ function App() {
           success={success}
           isOpen={isInfoTooltipOpen}
           onClose={closeAllPopups}
-          noClose={noClose}
+          errorText={errorText}
         />
       </div>
     </CurrentUserContext.Provider>

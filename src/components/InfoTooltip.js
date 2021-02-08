@@ -1,12 +1,12 @@
 import cn from "classnames";
 
-const InfoTooltip = ({ isOpen, success, onClose, noClose }) => {
+const InfoTooltip = ({ isOpen, success, onClose }) => {
   return (
     <section
       className={cn("popup", { "popup_is-opened": isOpen })}
       onClick={onClose}
     >
-      <div className="popup-info" onClick={noClose}>
+      <div className="popup-info" onClick={onClose}>
         <button
           type="button"
           name="Закрыть"
