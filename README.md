@@ -2,15 +2,15 @@
 
 проектная работа курса "Интерфейсы с использованием react"
 
-### Ссылка на проект
+### Link
 
 alexeyshumilin.github.io/mesto-react/§
 
-### Описание
+### About
 
-Одностраничный сайт, загружающий фотографии.
+A single page application that uploads photos.  
 
-### Функционал:
+### Functionality:
 
 Adding and deleting a photo§
 "Like"  
@@ -18,7 +18,7 @@ Editing a user profile
 Data is stored on the server and loaded from the server 
 Client side validation  
 
-### Стэк:
+### Stack:
 
 Flexbox 
 Grid Layout 
