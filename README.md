@@ -1,7 +1,5 @@
 # Mesto
 
-проектная работа курса "Интерфейсы с использованием react"
-
 ### Link
 
 alexeyshumilin.github.io/mesto-react/§
@@ -20,15 +18,16 @@ Client side validation
 
 ### Stack:
 
+React JS  
+JavaScript (Asynchronous JS, OOP, Fetch API) 
 Flexbox 
 Grid Layout 
 Positioning Elements  
 Animation and Transform using CSS 
 Nested BEM    
 Git 
-JavaScript (Asynchronous JS, OOP, Fetch API)  
 Webpack 
-React JS  
+
 Functional Components 
 
 ### Installation instructions:
