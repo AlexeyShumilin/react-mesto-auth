@@ -33,12 +33,16 @@ Functional Components
 
 ### Installation instructions:
 
-Clone repository:
+Clone repository: 
 
-git clone https://github.com/AlexeyShumilin/react-mesto-auth.git
+```
+git clone https://github.com/AlexeyShumilin/react-mesto-auth.git  
+```
 
-In the project directory, run the application in development mode:
+In the project directory, run the application in development mode:  
 
-npm install
-npm start 
-More about this source textSource text required for additional translation information
+```
+npm install 
+npm start   
+More about this source textSource text required for additional translation information  
+```
